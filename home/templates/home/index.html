@@ -1,0 +1,52 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'css/styles.css'%}" />
+    <title>{% block title%}{%endblock%}</title>
+  </head>
+  <body>
+    <div class="ajuste">
+      <nav>
+        <h1 class="title-bar">Notask</h1>
+        <div class="hidebar">
+          <button type="button" class="btn">Tarefas</button>
+          <button type="button" class="btn">Notas</button>
+          <button type="button" class="btn">Favoritos</button>
+        </div>
+      </nav>
+      <div class="container">
+        <div class="blocao">
+          <div class="bloquinhos">
+            <h2 class="title-block">Geral</h2>
+          </div>
+          <div class="bloquinhos">
+            <h2 class="title-block">Semanal</h2>
+          </div>
+          <div class="bloquinhos">
+            <h2 class="title-block">Mensal</h2>
+          </div>
+        </div>
+      </div>
+      <div class="note-bar">
+        <div class="tasks">
+          <img
+            class="img-task"
+            src="https://www.svgrepo.com/show/341118/task.svg"
+            width="50%"
+          />
+        </div>
+        <div class="notas">
+          <img
+            class="img-note"
+            src="https://www.svgrepo.com/show/7827/notes.svg"
+            width="50%"
+          />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
