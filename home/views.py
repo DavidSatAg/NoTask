@@ -5,3 +5,6 @@ from django.http import HttpResponse
 
 def home(request):
     return render(request, 'home/index.html')
+
+def task(request):
+    return render(request, '/home/davidaguina/Workspace/NoTask/note/templates/note/index.html')
