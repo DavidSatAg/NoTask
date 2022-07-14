@@ -1,12 +1,47 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="{% static 'css/styles.css'%}" />
+
+    <title>Notas</title>
 </head>
 <body>
-    <h1>teste!!!!!!!!!!!</h1>
+    <div class="container">
+        <div class="input-group mb-3">
+            <label class="input-group-text" for="inputGroupSelect01">Minhas anotações</label>
+            <select class="form-select" id="inputGroupSelect01">
+              <option selected>...</option>
+              <option value="1">gerais</option>
+              <option value="2">viagens</option>
+              <option value="3">Compras</option>
+            </select>
+          </div>
+
+
+        <div class="input-group flex-nowrap">
+            <span class="input-group-text" id="addon-wrapping">Titulo nova nota</span>
+            <input type="text" class="form-control" placeholder="Title note" aria-label="Username" aria-describedby="addon-wrapping">
+            <div class="input-group">
+            <textarea class="form-control" aria-label="With textarea"></textarea>
+            </div>
+            <button class="btn btn-outline-secondary" type="button" id="button-addon1">Salvar</button>
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 </body>
 </html>
