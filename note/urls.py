@@ -1,8 +1,7 @@
 from django.urls import path
-from note.views import editor
-from . import views
+from .views import AnotacaoList
 
 urlpatterns = [
     # path('', views.note, name='note'),
-    path('', editor, name='editor' ),
+    path('', AnotacaoList.as_view(), name='anotacoes')
 ]
