@@ -1,0 +1,21 @@
+<h1>Minha Lista de Tarefas</h1>
+<a href="{% url 'tarefa-create' %}">Adicionar uma tarefa</a>
+<table>
+  <tr>
+    <th>Tarefas</th>
+  </tr>
+  {% for tarefa in tarefas %}
+  <tr>
+    <td>{{ tarefa.titulo }}</td>
+    <td><a href="{% url 'tarefa' tarefa.id %}">Visualizar</a></td>
+    <td><a href="{% url 'tarefa-update' tarefa.id %}">Editar</a></td>
+    <td><a href="{% url 'tarefa-delete' tarefa.id %}">Excluir</a></td>
+  </tr>
+  <tr>
+    <td>{{ tarefa.conteudo }}</td>
+  </tr>
+  {% empty %}
+  <h3>Nenhum item nesta lista</h3>
+  {% endfor %}
+</table>
+<a href="{% url 'home' %}">Início</a>

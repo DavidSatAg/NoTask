@@ -1,0 +1,6 @@
+<a href="{% url 'tarefas' %}">Voltar</a>
+<form method="POST">
+  {% csrf_token %}
+  <p>Tem certeza que deseja excluir esta tarefa? "{{ tarefa }}"</p>
+  <input type="submit" value="Excluir" />
+</form>
