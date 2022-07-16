@@ -20,7 +20,6 @@ from note.views import AnotacaoList
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('home.urls')),
-    # path('note/', include('note.urls')),
     path('task/', include('task.urls')),
     path('note/', include('note.urls')),
 ]
