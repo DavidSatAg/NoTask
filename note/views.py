@@ -1,6 +1,8 @@
 from django.shortcuts import render
 from django.views.generic.list import ListView
 from django.views.generic.detail import DetailView
+from django.views.generic.edit import CreateView
+from django.urls import reverse_lazy
 from .models import Anotacao
 
 
@@ -11,10 +13,15 @@ from .models import Anotacao
 
 class AnotacaoList(ListView):
     model = Anotacao
-    context_object_name = 'anotacoes'
+    context_object_name = 'anotacoeslist'
     
 class AnotacaoDetail(DetailView):
     model = Anotacao
-    context_object_name = 'anotacao'
+    context_object_name = 'anotacoesdetail'
     template_name = 'note/editor.html'
 
+class AnotacaoCreate(CreateView):
+    model = Anotacao
+    fields = '__all__'
+    success_url = reverse_lazy('anotacoeslist')
+    
