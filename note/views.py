@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.views.generic.list import ListView
+from django.views.generic.detail import DetailView
 from .models import Anotacao
 
 
@@ -11,4 +12,9 @@ from .models import Anotacao
 class AnotacaoList(ListView):
     model = Anotacao
     context_object_name = 'anotacoes'
+    
+class AnotacaoDetail(DetailView):
+    model = Anotacao
+    context_object_name = 'anotacao'
     template_name = 'note/editor.html'
+
