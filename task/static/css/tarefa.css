@@ -1,0 +1,151 @@
+html, body {
+    background-color: #EBECF0;
+    height: 100vh;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.nav-bar {
+    background-color: #006E90;
+    background-image: linear-gradient(#00475e, #006E90);
+    height: 10vh;
+    color: #FFFFFF;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 3rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 2px 3px 3px #002734;
+}
+
+h1, h2, h3, .tarefa, .opcoes, .tarefas , .titulo_tarefa, a{
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 400;
+    
+}
+
+.botao {
+    background-color: #006E90;
+    padding: 10px;
+    border-radius: 15px;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.botao:hover {
+    background-color: #1ca2cb;
+}
+
+h2 {
+    display: flex;
+    justify-content: center;
+    line-height: 1;
+    align-items: center;
+    font-size: 3rem;
+}
+
+.tarefas {
+    background-color: #FFFFFF;
+    margin: 0px 30px 30px;
+    border-radius: 15px;
+    border: solid 1px rgb(182, 182, 182);
+}
+
+.tabela {
+    width: 100%;
+    background-color: #EBECF0;
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px 1px rgb(107, 107, 107);
+    display: flex;
+    flex-direction: column;
+}
+
+.tarefas-header {
+    display: flex;
+    height: 50px;
+    background-color: #006E90;
+    border-radius: 15px 15px 0px 0px;
+    align-items: center;
+    color: white;
+}
+
+.tarefa_completa, .tarefa_incompleta {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin: 20px;
+}
+
+.tarefa_completa {
+    background-color: rgb(98, 188, 95);
+}
+
+.tarefa_incompleta {
+    background-color: rgb(206, 206, 206);
+}
+
+.tarefa-titulo {
+    width: 80%
+}
+
+.titulo-p, .conteudo-completa, .conteudo-incompleta {
+    position: relative;
+    line-height: 1;
+    font-size: 1.5rem;
+    word-wrap: break-word;
+    text-align: left;
+}
+
+.conteudo-completa {
+    padding: 20px 30px;
+    background-color: rgb(188, 241, 186);
+    margin: 0px;
+    border-radius: 0 0 15px 15px;
+}
+
+.conteudo-incompleta {
+    margin: 20px;
+}
+
+.tarefa-icones {
+    width: 10%;
+    height: 100%;
+    line-height: 1rem;
+    display: center;
+    justify-content: center;
+}
+
+.tarefa-icones:hover {
+    background-color: #1ca2cb;
+    height: 100%;
+    border-radius: 15px;
+}
+
+.opcoes {
+    display: flex;
+    justify-content: center;
+    padding: 15px
+}
+
+.div_principal {
+    width: 800px;
+    line-height: 100px;
+    justify-content: center;
+}
+
+.bloco_da_tarefa {
+    background-color: #FFFFFF;
+}
+
+.icone {
+    width: 20px;
+}
