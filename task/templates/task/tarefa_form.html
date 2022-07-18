@@ -1,6 +1,10 @@
+{% extends 'task/base.html' %}
+{% block content %}
+{% load static %}
 <h3>Edição de tarefa</h3>
 <a href="{% url 'tarefas' %}">Voltar</a>
 <form method="POST" action="">
   {% csrf_token %} {{form.as_p}}
   <input type="submit" value="Enviar" />
 </form>
+{% endblock %}
