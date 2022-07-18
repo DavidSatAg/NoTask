@@ -12,7 +12,7 @@ class TarefaList(ListView):
 
 class TarefaDetail(DetailView):
     model = Tarefa
-    context_object_name: 'tarefa'
+    context_object_name= 'tarefa'
     template_name = 'task/tarefa.html'
 
 class TarefaCreate(CreateView):

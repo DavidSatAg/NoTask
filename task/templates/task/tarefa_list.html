@@ -1,21 +1,32 @@
+{% extends 'task/base.html' %}
+{% block content %}
+{% load static %}
 <h1>Minha Lista de Tarefas</h1>
-<a href="{% url 'tarefa-create' %}">Adicionar uma tarefa</a>
-<table>
-  <tr>
-    <th>Tarefas</th>
-  </tr>
-  {% for tarefa in tarefas %}
-  <tr>
-    <td>{{ tarefa.titulo }}</td>
-    <td><a href="{% url 'tarefa' tarefa.id %}">Visualizar</a></td>
-    <td><a href="{% url 'tarefa-update' tarefa.id %}">Editar</a></td>
-    <td><a href="{% url 'tarefa-delete' tarefa.id %}">Excluir</a></td>
-  </tr>
-  <tr>
-    <td>{{ tarefa.conteudo }}</td>
-  </tr>
-  {% empty %}
-  <h3>Nenhum item nesta lista</h3>
-  {% endfor %}
-</table>
-<a href="{% url 'home' %}">Início</a>
+<div class="div_principal">
+  <a href="{% url 'tarefa-create' %}" class="botao">Adicionar uma tarefa</a>
+    <div class="tabela">
+      <h2>Tarefas</h2>
+      {% for tarefa in tarefas %}
+      <div class="tarefas">
+        <div class="tarefas-header">
+          {% if tarefa.completa %}
+            <div class="tarefa_completa"></div>
+          {% else %}
+            <div class="tarefa_incompleta"></div>
+          {% endif %}
+          <div class="tarefa-titulo"><p class="titulo-p">{{ tarefa.titulo }}</p></div>
+          <div class="tarefa-icones"><a class="opcoes" href="{% url 'tarefa-update' tarefa.id %}"><img class='icone' src="{% static 'images/lapisbra.png' %}" alt=""></a></div>
+          <div class="tarefa-icones"><a class="opcoes" href="{% url 'tarefa-delete' tarefa.id %}"><img class='icone' src="{% static 'images/trash-2-32.png' %}" alt=""></a></div>
+        </div>
+        {% if tarefa.completa %}
+        <div class="tarefas-conteudo"><p class="conteudo-completa">{{ tarefa.conteudo }}</p></div>
+        {% else %}
+        <div class="tarefas-conteudo"><p class="conteudo-incompleta">{{ tarefa.conteudo }}</p></div>
+        {% endif %}
+      </div>
+      {% endfor %}
+    </div>
+
+    <a href="{% url 'home' %}" class="botao">Início</a>
+</div>
+{% endblock %}
