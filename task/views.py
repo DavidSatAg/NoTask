@@ -7,7 +7,7 @@ from .models import Tarefa
 # Create your views here.
 class TarefaList(ListView):
     model = Tarefa
-    context_object_name = 'tarefas'
+    context_object_name= 'tarefas'
     template_name = 'task/tarefa_list.html'
 class TarefaDetail(DetailView):
     model = Tarefa
