@@ -14,6 +14,7 @@ from .models import Anotacao
 class AnotacaoList(ListView):
     model = Anotacao
     context_object_name = 'anotacoeslist'
+    template_name = 'note/editor.html'
     
 class AnotacaoDetail(DetailView):
     model = Anotacao
