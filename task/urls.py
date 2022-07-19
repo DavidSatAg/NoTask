@@ -1,6 +1,5 @@
 from django.urls import path
 from .views import TarefaList, TarefaDetail, TarefaCreate, TarefaUpdate, DeleteView
-
 urlpatterns = [
     path('', TarefaList.as_view(), name='tarefas'),
     path('tarefa/<int:pk>/', TarefaDetail.as_view(), name='tarefa'),

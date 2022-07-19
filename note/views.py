@@ -1,20 +1,36 @@
 from django.shortcuts import render
-
-from django.http import HttpResponse
-from .models import Document
+from django.views.generic.list import ListView
+from django.views.generic.detail import DetailView
+from django.views.generic.edit import CreateView, DeleteView
+from django.urls import reverse_lazy
+from .models import Anotacao
+from .forms import PostForm
 
 # Create your views here.
 
 # def note(request):
 #     return render(request, "note/index.html")
 
-def editor(request):
-    docid = int(request.GET.get('docid', 0))
-    documents = Document.objects.all()
+class AnotacaoList(ListView):
+    model = Anotacao
+    context_object_name = 'anotacoeslist'
+    template_name = 'note/editor.html'
+    
+class AnotacaoDetail(DetailView):
+    model = Anotacao
+    context_object_name = 'anotacoesdetail'
+    template_name = 'note/editor.html'
 
-    context = {
-        'docid': docid,
-        'documents': documents
-    }
+class AnotacaoCreate(CreateView):
+    model = Anotacao
+    fields = '__all__'
+    success_url = reverse_lazy('anotacoeslist')
+    
+class DeleteAnotacao(DeleteView):
+    model = Anotacao
+    context_object_name = 'anotacoesdel'
+    success_url = reverse_lazy('anotacoeslist')
 
-    return render(request, 'note/editor.html', context)
+def post_new(request):
+    form = PostForm()
+    return render(request, 'note/post_edit.html', {'form': form})
