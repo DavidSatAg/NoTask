@@ -6,7 +6,11 @@
     
     
     .page-header {
+<<<<<<< HEAD
         background-color: #6B62E5;
+=======
+        background-color: #C25100;
+>>>>>>> testando forms
         margin-top: 0;
         padding: 20px 20px 20px 40px;
     }
@@ -22,7 +26,11 @@
     }
     
     h1, h2, h3, h4 {
+<<<<<<< HEAD
         font-family: 'Roboto', cursive;
+=======
+        font-family: 'Lobster', cursive;
+>>>>>>> testando forms
     }
     
     .date {
