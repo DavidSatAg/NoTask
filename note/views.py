@@ -4,7 +4,7 @@ from django.views.generic.detail import DetailView
 from django.views.generic.edit import CreateView, DeleteView
 from django.urls import reverse_lazy
 from .models import Anotacao
-
+from .forms import PostForm
 
 # Create your views here.
 
@@ -30,3 +30,7 @@ class DeleteAnotacao(DeleteView):
     model = Anotacao
     context_object_name = 'anotacoesdel'
     success_url = reverse_lazy('anotacoeslist')
+
+def post_new(request):
+    form = PostForm()
+    return render(request, 'note/post_edit.html', {'form': form})
