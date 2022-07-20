@@ -88,10 +88,14 @@ h2 {
 
 .tarefa_completa {
     background-color: rgb(98, 188, 95);
+    width: 4%;
+    height: 18px;
 }
 
 .tarefa_incompleta {
     background-color: rgb(206, 206, 206);
+    width: 4%;
+    height: 18px;
 }
 
 .tarefa-titulo {
@@ -180,4 +184,8 @@ textarea {
     border: solid rgb(107, 107, 107) 2px;
     border-radius: 10px;
     font-size: 20px;
+}
+
+.tarefa-data {
+    width: 50%;
 }

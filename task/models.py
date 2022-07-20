@@ -7,6 +7,7 @@ class Tarefa(models.Model):
     conteudo = models.TextField(null=True, blank=True)
     completa = models.BooleanField(default=False)
     criado_em = models.DateTimeField(auto_now_add=True)
+    data_tarefa = models.DateTimeField('data/hora', null=True, blank=True)
     def __str__(self):
         return self.titulo
     class Meta:
