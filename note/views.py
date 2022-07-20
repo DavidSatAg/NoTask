@@ -32,5 +32,7 @@ class DeleteAnotacao(DeleteView):
     success_url = reverse_lazy('anotacoeslist')
 
 def post_new(request):
-    form = PostForm()
+    form = PostForm(request.POST or None)
+    if request.method == 'POST':
+        form.save()
     return render(request, 'note/post_edit.html', {'form': form})
