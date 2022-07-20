@@ -6,15 +6,9 @@
     
     
     .page-header {
-<<<<<<< HEAD
-<<<<<<< HEAD
         background-color: #6B62E5;
-=======
         background-color: #C25100;
->>>>>>> testando forms
-=======
         background-color: #6B62E5;
->>>>>>> implementa a página de notas
         margin-top: 0;
         padding: 20px 20px 20px 40px;
     }
@@ -30,15 +24,9 @@
     }
     
     h1, h2, h3, h4 {
-<<<<<<< HEAD
-<<<<<<< HEAD
         font-family: 'Roboto', cursive;
-=======
         font-family: 'Lobster', cursive;
->>>>>>> testando forms
-=======
         font-family: 'Roboto', cursive;
->>>>>>> implementa a página de notas
     }
     
     .date {
