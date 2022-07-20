@@ -15,7 +15,7 @@
             <div class="tarefa_incompleta"></div>
           {% endif %}
           <div class="tarefa-titulo"><p class="titulo-p">{{ tarefa.titulo }}</p></div>
-          <div class="tarefa-data"><p>{{ tarefa.data_tarefa }}</p></div>
+          <div class="tarefa-data"><p class="date-p">{{ tarefa.data_tarefa }}</p></div>
           <div class="tarefa-icones"><a class="opcoes" href="{% url 'tarefa-update' tarefa.id %}"><img class='icone' src="{% static 'images/lapisbra.png' %}" alt=""></a></div>
           <div class="tarefa-icones"><a class="opcoes" href="{% url 'tarefa-delete' tarefa.id %}"><img class='icone' src="{% static 'images/trash-2-32.png' %}" alt=""></a></div>
         </div>
