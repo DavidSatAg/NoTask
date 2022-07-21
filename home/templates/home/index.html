@@ -13,8 +13,8 @@
       <nav>
         <h1 class="title-bar">Notask</h1>
         <div class="hidebar">
-          <button type="button" class="btn">Tarefas</button>
-          <button type="button" class="btn">Notas</button>
+          <a href="{% url 'tarefas' %}"><button type="button" class="btn">Tarefas</button></a>
+          <a href="{% url 'post_new' %}"><button type="button" class="btn">Notas</button></a>
           <button type="button" class="btn">Favoritos</button>
         </div>
       </nav>
@@ -33,7 +33,7 @@
       </div>
       <div class="note-bar">
         <div class="tasks">
-          <a href="{% url 'tarefas' %}"
+          <a href="{% url 'tarefa-create' %}"
             ><img
               class="img-task"
               src="https://www.svgrepo.com/show/341118/task.svg"

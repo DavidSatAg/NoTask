@@ -109,6 +109,13 @@ h2 {
     word-wrap: break-word;
     text-align: left;
 }
+.date-p {
+    position: relative;
+    line-height: 1;
+    font-size: 1rem;
+    word-wrap: break-word;
+    text-align: left;
+}
 
 .conteudo-completa {
     padding: 20px 30px;
