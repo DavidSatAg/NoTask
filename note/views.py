@@ -35,4 +35,4 @@ def post_new(request):
     form = PostForm(request.POST or None)
     if request.method == 'POST':
         form.save()
-    return render(request, 'note/post_edit.html', {'form': form})
+    return render(request, 'note/note_form.html', {'form': form})
