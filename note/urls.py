@@ -1,5 +1,8 @@
 from django.urls import path
-from note.views import editor
+from . import views
+from .views import editor
 urlpatterns = [
     path('', editor, name='editor' )
 ]
+
+
