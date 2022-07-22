@@ -14,12 +14,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from note.views import editor
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('home.urls')),
     path('task/', include('task.urls')),
-    path('', editor, name='editor')
+    path('note/', include('note.urls')),
   
 ]
