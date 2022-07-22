@@ -1,6 +1,5 @@
 from django.contrib import admin
 
-from .models import Anotacao
-# Register your models here.
+from .models import Note
 
-admin.site.register(Anotacao)
+admin.site.register(Note)
