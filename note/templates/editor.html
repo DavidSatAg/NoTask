@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 
 <html>
@@ -5,7 +6,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Notes</title>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
+        <link rel="stylesheet" href="{% static 'css/note.css' %}">
     </head>
 
     <body>
@@ -25,12 +26,12 @@
             <div class="columns">
                 <div class="column is-2">
                     <aside class="menu">
-                        <p class="menu-label">Documents</p>
+                        <p class="menu-label">Notas</p>
 
                         <ul class="menu-list">
-                            {% for doc in documents %}
+                            {% for note in notes %}
                                 <li>
-                                    <a href="{% url 'editor' %}?docid={{ doc.id }}">{{ doc.title }}</a>
+                                    <a href="{% url 'editor' %}?noteid={{ note.id }}">{{ note.title }}</a>
                                 </li>
                             {% endfor %}
                         </ul>
@@ -41,30 +42,30 @@
                     <form method="post" action="{% url 'editor' %}">
                         {% csrf_token %}
 
-                        <input type="hidden" name="docid" value="{{ docid }}">
+                        <input type="hidden" name="noteid" value="{{ noteid }}">
 
                         <div class="field">
                             <label class="label">
-                                Title
+                                Título
 
-                                {% if document %}
+                                {% if note %}
                                     <span class="has-text-grey-light">
-                                        Created at: {{ document.created_at|date:"m/d Y" }} / 
-                                        Modified at: {{ document.modified_at|date:"m/d Y" }}
+                                        Created at: {{ note.created_at|date:"m/d Y" }} / 
+                                        Modified at: {{ note.modified_at|date:"m/d Y" }}
                                     </span>
                                 {% endif %}
                             </label>
 
                             <div class="control">
-                                <input type="text" class="input" name="title" placeholder="Title"{% if document %} value="{{ document.title }}"{% endif %}>
+                                <input type="text" class="input" name="title" placeholder="Title"{% if note %} value="{{ note.title }}"{% endif %}>
                             </div>
                         </div>
 
                         <div class="field">
-                            <label class="label">Content</label>
+                            <label class="label">Texto</label>
 
                             <div class="control">
-                                <textarea class="textarea" name="content" placeholder="Content">{% if document %}{{ document.content }}{% endif %}</textarea>
+                                <textarea class="textarea" name="content" placeholder="Content">{% if note %}{{ note.content }}{% endif %}</textarea>
                             </div>
                         </div>
 
@@ -72,9 +73,9 @@
                             <div class="control">
                                 <button class="button is-primary">Save</button>
                             </div>
-                            {% if document %}
+                            {% if note %}
                                 <div class="control">
-                                    <a href="{% url 'delete_document' document.id %}" class="button is-danger">Delete</a>
+                                    <a href="{% url 'delete_note' note.id %}" class="button is-danger">Delete</a>
                                 </div>
                             {% endif %}
                         </div>
