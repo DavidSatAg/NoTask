@@ -1,0 +1,73 @@
+body{
+    background-color: #ebecf0;
+}
+.navbar_purple{
+    background-color: #6B62E5;
+    color: #fff;
+    width: 100%;
+    height: 12%;
+    display: flex;
+    justify-content: space-between;
+  
+}
+.titulo{
+
+    color: #fff;
+    font-family: 'Roboto', cursive;
+    font-size: 36pt;
+    text-decoration: none;
+
+    
+}
+.navbar_brand, .navbar_menu{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 56px;
+}
+.navbar_newnote{
+    color: #fff;
+    font-family: 'Roboto', cursive;
+    font-size: 16pt;
+    text-decoration: none;
+  
+}
+.alinha{
+    display: flex;
+    flex-direction: row;
+}
+.memoria{
+    width: 28%;
+}
+.input{
+   
+    width: 72%;
+    height: 100%;
+}
+.section{
+    /* background-color: aquamarine; */
+    display: flex;
+    height: 100%;
+}
+.lista{
+    list-style-type: none;
+    text-decoration: none;
+}
+.menu_label{
+    font-family: 'Roboto', cursive; 
+    font-weight: 300;
+    color: #6B62E5;
+    margin: 30px 40px;
+}
+.input_titulo{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20pt;
+    color: #6B62E5;
+    font-weight: 400;
+    margin-top: 20px;
+
+}
+
+.control{
+    color: #6B62E5;
+}
