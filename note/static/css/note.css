@@ -67,6 +67,23 @@ body{
 
 }
 
-.control{
-    color: #6B62E5;
+.input_control{
+    border-color: #62e5e3;
+    border-radius: 5px;
+    width: 200px;
+}
+.input_content{
+    border-color: #62e5e3;
+    border-radius: 5px;
+    width: 400px;
+    height: 200px;
+}
+
+.save{
+    background-color: #0ac4c0;
+    width: 100px;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
 }

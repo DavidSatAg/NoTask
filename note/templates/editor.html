@@ -65,7 +65,7 @@
                                 </label>
 
                                 <div class="control">
-                                    <input type="text" class="input" name="title" placeholder="Title"{% if note %} value="{{ note.title }}"{% endif %}>
+                                    <input type="text" class="input_control" name="title" placeholder="Title"{% if note %} value="{{ note.title }}"{% endif %}>
                                 </div>
                             </div>
 
@@ -73,17 +73,17 @@
                                 <label class="input_titulo">Texto</label>
 
                                 <div class="control">
-                                    <textarea class="textarea" name="content" placeholder="Content">{% if note %}{{ note.content }}{% endif %}</textarea>
+                                    <textarea class="input_content" name="content" placeholder="Content">{% if note %}{{ note.content }}{% endif %}</textarea>
                                 </div>
                             </div>
 
                             <div class="field is-grouped">
                                 <div class="control">
-                                    <button class="button is-primary">Save</button>
+                                    <button class="save">Save</button>
                                 </div>
                                 {% if note %}
                                     <div class="control">
-                                        <a href="{% url 'delete_note' note.id %}" class="button is-danger">Delete</a>
+                                        <a href="{% url 'delete_note' note.id %}" class="delete">Delete</a>
                                     </div>
                                 {% endif %}
                             </div>
