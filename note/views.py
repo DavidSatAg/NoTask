@@ -1,38 +1,44 @@
-from django.shortcuts import render
-from django.views.generic.list import ListView
-from django.views.generic.detail import DetailView
-from django.views.generic.edit import CreateView, DeleteView
-from django.urls import reverse_lazy
-from .models import Anotacao
-from .forms import PostForm
+from django.shortcuts import render, redirect
 
-# Create your views here.
+from .models import Note
 
-# def note(request):
-#     return render(request, "note/index.html")
+def editor(request):
+    noteid = int(request.GET.get('noteid' , 0))
+    notes = Note.objects.all()
 
-class AnotacaoList(ListView):
-    model = Anotacao
-    context_object_name = 'anotacoeslist'
-    template_name = 'note/editor.html'
-    
-class AnotacaoDetail(DetailView):
-    model = Anotacao
-    context_object_name = 'anotacoesdetail'
-    template_name = 'note/editor.html'
-
-class AnotacaoCreate(CreateView):
-    model = Anotacao
-    fields = '__all__'
-    success_url = reverse_lazy('anotacoeslist')
-    
-class DeleteAnotacao(DeleteView):
-    model = Anotacao
-    context_object_name = 'anotacoesdel'
-    success_url = reverse_lazy('anotacoeslist')
-
-def post_new(request):
-    form = PostForm(request.POST or None)
     if request.method == 'POST':
-        form.save()
-    return render(request, 'note/note_form.html', {'form': form})
+        noteid = int(request.POST.get('noteid', 0))
+        title = request.POST.get('title', 0)
+        content = request.POST.get('content', '')
+        if noteid > 0:
+            note = Note.objects.get(pk=noteid)
+            note.title = title
+            note.content = content
+            note.save()
+
+            return redirect('/?noteid=%i' % noteid)
+        else:
+            note = Note.objects.create(title= title, content=content)
+
+            return redirect('/?noteid=%i' % note.id)
+    
+    
+    if noteid > 0:
+        note = Note.objects.get(pk=noteid)
+    else:
+        note = ''
+
+
+
+    context = {
+        'noteid': noteid,
+        'notes':notes,
+        'note': note,
+    }
+    return render(request, 'editor.html', context)
+
+def delete_note(request, noteid):
+    note = Note.objects.get(pk=noteid)
+    note.delete = ()
+
+    return redirect('/?noteid=0')
