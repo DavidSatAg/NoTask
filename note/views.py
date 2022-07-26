@@ -29,20 +29,12 @@ def editor(request):
         note = ''
 
 
-# def post_new(request):
-#     form = PostForm(request.POST or None)
-#     if request.method == 'POST':
-#         form.save()
-#     return render(request, 'note/note_form.html', {'form': form})
-
-
-
     context = {
         'noteid': noteid,
         'notes':notes,
         'note': note,
     }
-    return render(request, 'editor.html', context)
+    return render(request, 'note/editor.html', context)
 
 def delete_note(request, noteid):
     note = Note.objects.get(pk=noteid)
@@ -50,3 +42,8 @@ def delete_note(request, noteid):
 
     return redirect('/?noteid=0')
 
+def show(request):
+    context= {
+        'chave': 'valor'
+    }
+    return render(request, 'note/show.html', context)
