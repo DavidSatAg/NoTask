@@ -43,7 +43,8 @@ def delete_note(request, noteid):
     return redirect('/?noteid=0')
 
 def show(request):
+    notas = Note.objects.all()
     context= {
-        'chave': 'valor'
+        'notas': notas
     }
     return render(request, 'note/show.html', context)
