@@ -1,9 +1,0 @@
-{% extends 'note/editor.html' %}
-
-{% block content %}
-    <h2>Nova nota</h2>
-    <form method="POST" action="post_new" class="post-form">{% csrf_token %}
-        {{ form.as_p }}
-        <input type="submit" value="save" class="save btn btn-default"> 
-    </form>
-{% endblock %}
