@@ -1,1 +1,1 @@
-web: gunicorn NoTask.wsgi --log-file -
+web: gunicorn deploynotask.wsgi
