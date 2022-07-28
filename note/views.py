@@ -16,7 +16,7 @@ def editor(request):
             note.content = content
             note.save()
 
-            return redirect('/?noteid=%i' % noteid)
+            return redirect('editor')
         else:
             note = Note.objects.create(title= title, content=content)
 

@@ -16,7 +16,7 @@
     <body>
         <nav class="navbar_purple">
             <div class="navbar_brand">
-                <a href="{% url 'editor' %}" class="titulo">Notas</a>
+                <h1 class="titulo">Notas</h1>
             </div>
 
             <div class="navbar_menu">
@@ -79,11 +79,11 @@
 
                             <div class="field is-grouped">
                                 <div class="control">
-                                    <button class="save">Save</button>
+                                    <a href="{% url 'show' %}"><button type="submit" class="save">Save</button></a>
                                 </div>
                                 {% if note %}
                                     <div class="control">
-                                        <a href="{% url 'delete_note' note.id %}" class="delete">Delete</a>
+                                        <a href="{% url 'delete_note' note.id %}" class="delete"><button type="submit">Delete</button></a>
                                     </div>
                                 {% endif %}
                             </div>
