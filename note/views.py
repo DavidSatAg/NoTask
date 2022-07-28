@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 
 from .models import Note
 
@@ -37,10 +37,10 @@ def editor(request):
     return render(request, 'note/editor.html', context)
 
 def delete_note(request, noteid):
-    note = Note.objects.get(pk=noteid)
-    note.delete = ()
-
-    return redirect('/?noteid=0')
+    note = get_object_or_404(Note, id=noteid)
+    note.delete()
+    # return render(request, 'note/show.html', note)
+    return redirect('editor')
 
 def show(request):
     notas = Note.objects.all()

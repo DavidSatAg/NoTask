@@ -32,12 +32,13 @@
                     <div class="lista_notas">
                         <aside class="menu">
                             <p class="menu_label">Arquivo</p>
-
+                            
                             <ul style="list-style: none; text-decoration: none;">
                                 {% for note in notes %}
-                                    <li>
-                                        <a href="{% url 'editor' %}?noteid={{ note.id }}">{{ note.title }}</a>
-                                    </li>
+                                <li>
+                                    <a href="{% url 'editor' %}?noteid={{ note.id }}">{{ note.title }}</a>
+                                    <a href="{% url 'delete_note' noteid=note.id %}">Deletar post</a>
+                                </li>
                                 {% endfor %}
                             </ul>
                         </aside>
@@ -81,11 +82,8 @@
                                 <div class="control">
                                     <a href="{% url 'show' %}"><button type="submit" class="save">Save</button></a>
                                 </div>
-                                {% if note %}
-                                    <div class="control">
-                                        <a href="{% url 'delete_note' note.id %}" class="delete"><button type="submit">Delete</button></a>
-                                    </div>
-                                {% endif %}
+                              
+                              <a href="{% url 'delete_note' noteid %}">Deletar post</a>
                             </div>
                         </form>
                     </div>
