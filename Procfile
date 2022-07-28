@@ -1,1 +1,1 @@
-web: gunicorn deploynotask.wsgi
+web: gunicorn NoTask.wsgi
