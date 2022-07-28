@@ -1,5 +1,6 @@
 body{
     background-color: #ebecf0;
+    font-family: 'Roboto';
 }
 .navbar_purple{
     background-color: #6B62E5;
@@ -54,6 +55,7 @@ body{
 }
 .menu_label{
     font-family: 'Roboto', cursive; 
+    font-size: medium;
     font-weight: 300;
     color: #6B62E5;
     margin: 30px 40px;
@@ -86,4 +88,26 @@ body{
     border: none;
     border-radius: 5px;
     color: #fff;
+}
+.listar_arquivo{
+    color: #adabad;
+    list-style: none; 
+    text-decoration: none;
+
+}
+.delete{
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-left: 5px;
+    font-weight:700
+}
+.btn-delete{
+    background-color: #6B62E5;
+    width: 60px;
+    height: 20px;
+    border-radius: 5px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+
 }
