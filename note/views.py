@@ -20,7 +20,7 @@ def editor(request):
         else:
             note = Note.objects.create(title= title, content=content)
 
-            return redirect('/?noteid=%i' % note.id)
+            return redirect('editor')
     
     
     if noteid > 0:
