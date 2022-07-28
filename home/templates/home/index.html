@@ -33,20 +33,30 @@
       </div>
       <div class="note-bar">
         <div class="tasks">
-          <a href="{% url 'tarefa-create' %}"
-            ><img
-              class="img-task"
-              src="https://www.svgrepo.com/show/341118/task.svg"
-              width="50%"
-          /></a>
+          <a class="ancora-botao" href="{% url 'tarefa-create' %}"
+            >
+            <div class="botao-home">
+              <div class="img-botao"><img
+                class="img-task"
+                src="https://www.svgrepo.com/show/341118/task.svg"
+                width="50%"
+            /></div>
+            <div><p class="titulo-botao">Adicionar Tarefas</p></div>
+            </div>
+          </a>
         </div>
         <div class="notas">
-            <a  href="{% url 'editor' %}">
-            <img
-              class="img-note"
-              src="https://www.svgrepo.com/show/7827/notes.svg"
-              width="50%"
-          /></a>
+          <a class="ancora-botao" href="{% url 'tarefa-create' %}"
+            >
+            <div class="botao-home">
+              <div class="img-botao"><img
+                class="img-note"
+                src="https://www.svgrepo.com/show/7827/notes.svg"
+                width="50%"
+            /></div>
+            <div><p class="titulo-botao">Adicionar Notas</p></div>
+            </div>
+          </a>
         </div>
       </div>
     </div>
