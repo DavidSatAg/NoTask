@@ -16,5 +16,19 @@
         <a href="" class="botao">Adicionar uma nota</a>
     </div>
 
+<ul>
+    {% for nota in notas %}
+    <li>
+        <h3>{{nota.title}}</h3>
+        <p>{{nota.content}}</p>
+        <p>{{nota.date}}</p>
+    </li>
+    {% endfor %}
+</ul>
+<p>note.id</p>
+<p>note.title</p>
+<p>note.content</p>
+
+
 </body>
 </html>
