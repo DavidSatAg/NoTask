@@ -1,25 +1,26 @@
 {% load static %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'css/reset.css' %}">
-    <link rel="stylesheet" href="{% static 'css/show.css' %}">
+    <link rel="stylesheet" href="{% static '/css/reset.css' %}">
+    <link rel="stylesheet" href="{% static '/css/show.css' %}">
     <title>Minhas Notas</title>
 </head>
 <body>
+    <div class="container">
+        <h3 class="title-pg-note">Minhas Notas</h3>
+        <div class="colunas-notas">
+            <div class="title-note"></div>    
+                {% for nota in notas %}
+                    <a class="link-title-note" href="">{{nota.title}}</a>
+                    <br>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
 
-<ul>
-    {% for nota in notas %}
-    <li>
-        <h3>{{nota.title}}</h3>
-        <p>{{nota.content}}</p>
-        <p>{{nota.date}}</p>
-    </li>
-    {% endfor %}
-</ul>
-    
 </body>
 </html>
