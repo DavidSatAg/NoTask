@@ -28,21 +28,56 @@ nav {
   margin-top: 60px;
   width: 100%;
   height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
 }
 .title-bar {
   color: #ffffff;
   text-align: center;
-  margin-top: 5%;
+  margin-top: 7%;
+  height: 40px;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 2rem;
 }
+
+.title-block {
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.botoes {
+  height: 8%;
+  text-align: center;
+}
+
 .btn {
+  background-image: radial-gradient(#6b62e5, #5951d1, #44407e);
   color: white;
   margin-bottom: 15%;
-  height: 6%;
-  width: 100%;
+  height: 100%;
+  width: 80%;
   background-color: #6b62e5;
   font-weight: 900;
   border-radius: 10px;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 400;
+  align-self: center;
+  border: solid #48438b 8px;
+  box-shadow: 0px 0px 9px 5px #201c54;
+  border-radius: 15px;
 }
+
+.btn:hover {
+  background-image: radial-gradient(#7e78d1, #625adf, #474478);
+  font-family: 'Ubuntu', sans-serif;
+  border: solid #48438b 8px;
+  box-shadow: 0px 0px 9px 5px #564dd1;
+  width: 75%;
+  height: 95%;
+  cursor: pointer;
+}
+
 .note-bar {
   width: 20%;
   height: 100%;
@@ -57,6 +92,7 @@ nav {
   justify-content: space-around;
   height: 100%;
   text-align: center;
+  background-image: linear-gradient(to right, #ffffff, rgb(245, 245, 245), white, #ffffff, #EBECF0);
 }
 .bloquinhos {
   height: 25%;
