@@ -13,6 +13,15 @@
       <nav>
         <h1 class="title-bar">Notask</h1>
         <div class="hidebar">
+          <div class="bloco-mensagem">
+            {% if request.user.is_authenticated %}
+            <p class="mensagem-home">Olá, {{ request.user }}</p>
+            <a href="{% url 'logout' %}" class="mensagem-home">Logout</a>
+            {% else %}
+            <div class="mensagem-home">Olá, você não está logado! Para acessar as suas tarefas e notas faça o login.</div>
+            <a href="{% url 'login' %}" class="mensagem-home">Login</a>
+            {% endif %}
+          </div>
           <div class="botoes"><a href="{% url 'tarefas' %}"><button type="button" class="btn">Tarefas</button></a></div>
           <div class="botoes"><a href="{% url 'show' %}"><button type="button" class="btn">Notas</button></a></div>
           <div class="botoes"><button type="button" class="btn">Favoritos</button></div>
