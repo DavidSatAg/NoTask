@@ -3,14 +3,18 @@ body{
     font-family: 'Roboto';
 }
 .navbar_purple{
-    background-color: #6B62E5;
+    background-color: #006E90;
+    background-image: linear-gradient(#00475e, #006E90);
     color: #fff;
     width: 100%;
-    height: 12%;
+    font-family: 'Ubuntu', sans-serif;
+    height: 10vh;
     display: flex;
     justify-content: space-between;
+    box-shadow: 0px 2px 3px 3px #002734;
   
 }
+
 .titulo{
 
     color: #fff;
@@ -57,32 +61,32 @@ body{
     font-family: 'Roboto', cursive; 
     font-size: medium;
     font-weight: 300;
-    color: #6B62E5;
+    color: #0a0a10;
     margin: 30px 40px;
 }
 .input_titulo{
     font-family: 'Open Sans', sans-serif;
     font-size: 20pt;
-    color: #6B62E5;
+    color: #0a0a10;
     font-weight: 400;
     margin-top: 20px;
 
 }
 
 .input_control{
-    border-color: #62e5e3;
+    border-color:border: solid 1px rgb(182, 182, 182);
     border-radius: 5px;
     width: 200px;
 }
 .input_content{
-    border-color: #62e5e3;
+    border: solid 1px rgb(182, 182, 182);
     border-radius: 5px;
     width: 400px;
     height: 200px;
 }
 
 .save{
-    background-color: #0ac4c0;
+    background-color: #006E90;
     width: 100px;
     height: 40px;
     border: none;
@@ -103,7 +107,7 @@ body{
     font-weight:700
 }
 .btn-delete{
-    background-color: #6B62E5;
+    background-color: #006E90;
     width: 60px;
     height: 20px;
     border-radius: 5px;
