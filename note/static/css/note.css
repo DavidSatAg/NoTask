@@ -74,7 +74,7 @@ body{
 }
 
 .input_control{
-    border-color:border: solid 1px rgb(182, 182, 182);
+    border: solid 1px rgb(182, 182, 182);
     border-radius: 5px;
     width: 200px;
 }
@@ -114,4 +114,12 @@ body{
     margin-top: 8px;
     margin-bottom: 8px;
 
+}
+.nota.title{
+    color: aqua;
+}
+.bloco{
+    width: 100px;
+    height: 100px;
+    background-color: #e0d55a;
 }

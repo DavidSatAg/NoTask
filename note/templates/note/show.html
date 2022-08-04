@@ -18,16 +18,18 @@
 
 <ul>
     {% for nota in notas %}
-    <li>
-        <h3>{{nota.title}}</h3>
-        <p>{{nota.content}}</p>
-        <p>{{nota.date}}</p>
-    </li>
+    <div class="bloco">
+
+        <li>
+            <h3 class = 'nota.title'>{{nota.title}}</h3>
+            <p>{{nota.content}}</p>
+            <p>{{nota.date}}</p>
+        </li>
+
+    </div>
     {% endfor %}
 </ul>
-<p>note.id</p>
-<p>note.title</p>
-<p>note.content</p>
+
 
 
 </body>
