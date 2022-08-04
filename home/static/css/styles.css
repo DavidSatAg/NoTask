@@ -20,7 +20,6 @@ nav {
   justify-content: space-around;
 }
 .container {
-  width: 60%;
   height: 100%;
   background-color: #ebecf0;
 }
@@ -95,7 +94,7 @@ nav {
 }
 
 .note-bar {
-  width: 20%;
+  width: 100%;
   height: 100%;
   background-color: #006e90;
   display: flex;
@@ -110,9 +109,7 @@ nav {
   text-align: center;
   background-image: linear-gradient(to right, #ffffff, rgb(245, 245, 245), white, #ffffff, #EBECF0);
 }
-.bloquinhos {
-  height: 25%;
-}
+
 
 .tasks, .notas {
   height: 50%;
@@ -121,17 +118,15 @@ nav {
   justify-content: center;
 }
 
-.img-note {
 
-}
 .img-task {
   width: 60%;
 }
 
 .botao-home {
   background-image: radial-gradient(#15a3d1, #0087b1c2, #00485e);
-  width: 320px;
-  height: 320px;
+  width: 240px;
+  height: 240px;
   margin: auto;
   border-radius: 40px;
   display: flex;
@@ -143,8 +138,8 @@ nav {
 
 .botao-home:hover {
   background-image: radial-gradient(#57ccf3, #009dcec2, #004e65);
-  width: 310px;
-  height: 310px;
+  width: 240px;
+  height: 240px;
   margin: auto;
   border-radius: 40px;
   display: flex;
